@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions – Flora</title>
+  <meta name="description" content="Terms and Conditions for the Flora iOS app." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav>
+    <a href="index.html" class="nav-brand">Fl<span>o</span>ra</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html" class="active">Terms</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Terms &amp; Conditions</h1>
+      <p class="updated">Last updated: 3 March 2026</p>
+      <p>
+        These Terms &amp; Conditions apply to the Flora app (hereafter
+        referred to as "Application") for iOS devices, created by Double E
+        Studio (hereafter referred to as "Service Provider"). The Application
+        is currently free to use.
+      </p>
+    </div>
+
+    <div class="prose">
+
+      <h2>Acceptance of Terms</h2>
+      <p>
+        By downloading or using the Application, you agree to be bound by
+        these Terms &amp; Conditions. Please read them carefully before using
+        the Application.
+      </p>
+      <p>
+        Unauthorised copying, modification, reverse-engineering, extraction of
+        source code, translation, or creation of derivative works based upon
+        the Application is strictly prohibited. All intellectual property
+        rights in the Application — including but not limited to trademarks,
+        botanical imagery, and written content — remain the exclusive property
+        of the Service Provider.
+      </p>
+
+      <h2>Use of the Application</h2>
+      <p>
+        The Application is provided "AS IS". The Service Provider strives to
+        ensure that the Application is reliable and fully functional at all
+        times. However, the Service Provider reserves the right to modify the
+        Application, add paid features, or discontinue features at any time.
+        Any changes that affect pricing will be clearly communicated in
+        advance.
+      </p>
+      <p>
+        You are responsible for maintaining the security of your device and
+        ensuring the Application is used only in a manner consistent with
+        these Terms.
+      </p>
+
+      <h2>Personal Data</h2>
+      <p>
+        The Application stores only your in-app preferences (such as saved
+        flowers and display settings) locally on your device. No personal data
+        is transmitted to the Service Provider or any third party. It is your
+        responsibility to keep your device secure.
+      </p>
+      <p>
+        The Service Provider advises against jailbreaking your iOS device, as
+        doing so can compromise the device's security and may affect the
+        Application's functionality.
+      </p>
+
+      <h2>Connectivity and Offline Use</h2>
+      <p>
+        Flora is designed to work entirely offline. All flower content is
+        bundled with the Application and does not require an internet
+        connection. The Service Provider is not responsible for any issues
+        arising from lack of device battery or storage.
+      </p>
+
+      <h2>Updates and Termination</h2>
+      <p>
+        The Application may be updated from time to time to maintain
+        compatibility with new iOS versions or to improve functionality and
+        content. You agree to accept updates when offered.
+      </p>
+      <p>
+        The Service Provider may discontinue the Application at any time
+        without prior notice. Upon termination, any rights granted to you
+        under these Terms will end, and you must delete the Application if
+        instructed to do so.
+      </p>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        While the Service Provider aims to provide accurate, up-to-date
+        botanical information, all content is provided for educational and
+        entertainment purposes only. The Service Provider accepts no liability
+        for direct or indirect losses, inaccuracies, or omissions resulting
+        from the use of the Application.
+      </p>
+
+      <h2>Third-Party Platforms</h2>
+      <p>
+        The Application is distributed via the Apple App Store. Your use of
+        the Application is also governed by Apple's applicable terms,
+        conditions, and policies. The Service Provider is not liable for any
+        actions or obligations of the App Store that may affect your access to
+        or use of the Application.
+      </p>
+
+      <h2>Changes to Terms</h2>
+      <p>
+        These Terms &amp; Conditions may be updated periodically. You are
+        encouraged to review this page regularly. Continued use of the
+        Application after any changes constitutes your acceptance of the
+        revised terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For questions or suggestions regarding these Terms &amp; Conditions,
+        please contact the Service Provider at
+        <a href="mailto:doublee.studio.team@gmail.com">doublee.studio.team@gmail.com</a>.
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Flora</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Flora. All rights reserved. Built by Double E Studio.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+  </script>
+
+</body>
+</html>

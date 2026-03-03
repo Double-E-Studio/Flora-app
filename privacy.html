@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Flora</title>
+  <meta name="description" content="Privacy Policy for the Flora iOS app." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav>
+    <a href="index.html" class="nav-brand">Fl<span>o</span>ra</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="privacy.html" class="active">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 3 March 2026</p>
+      <p>
+        This Privacy Policy applies to the Flora app (hereafter referred to
+        as "Application") for iOS devices, created by Double E Studio
+        (hereafter referred to as "Service Provider"). The Application is
+        provided as a free service, "AS IS".
+      </p>
+    </div>
+
+    <div class="prose">
+
+      <h2>Information Collection</h2>
+      <p>
+        The Application does not collect any personal information. No
+        registration or login is required to use the Application.
+      </p>
+      <p>
+        The only data stored is user preferences (such as bookmarked flowers),
+        which are saved locally on the device and are never transmitted or
+        shared externally.
+      </p>
+
+      <h2>Location Information</h2>
+      <p>
+        The Application does not request or collect precise real-time location
+        information from your device at any time.
+      </p>
+
+      <h2>Third-Party Access</h2>
+      <p>
+        Since the Application does not collect personal information, no data is
+        shared with any third parties. The Application operates entirely offline
+        and does not communicate with external servers.
+      </p>
+
+      <h2>Internet Access</h2>
+      <p>
+        Flora does not require an internet connection to function. All flower
+        content — images, descriptions, and fun facts — is bundled directly
+        within the Application and stored on your device.
+      </p>
+
+      <h2>Children</h2>
+      <p>
+        The Application is not directed to children under the age of 13. The
+        Service Provider does not knowingly collect personal information from
+        children. If you believe a child has provided personal information,
+        please contact us at
+        <a href="mailto:doublee.studio.team@gmail.com">doublee.studio.team@gmail.com</a>
+        so we can take appropriate action.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        The Application does not transmit or store personal information
+        externally, which means there is no risk of unauthorised access to user
+        data through the Application. All locally stored preferences are
+        protected by the standard iOS device security model.
+      </p>
+
+      <h2>Changes to This Privacy Policy</h2>
+      <p>
+        This Privacy Policy may be updated from time to time. Any changes will
+        be reflected on this page with an updated effective date. Your continued
+        use of the Application after any modifications constitutes your
+        acceptance of the revised policy.
+      </p>
+
+      <h2>Your Consent</h2>
+      <p>
+        By using the Application, you consent to the processing of information
+        as described in this Privacy Policy — now and as amended in the future.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        If you have any questions or concerns regarding privacy while using the
+        Application, please contact the Service Provider at
+        <a href="mailto:doublee.studio.team@gmail.com">doublee.studio.team@gmail.com</a>.
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Flora</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Flora. All rights reserved. Built by Double E Studio.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flora – A New Flower Every Day</title>
+  <meta name="description" content="Flora is an iOS app that reveals a new flower every single day — with its name, beauty and story. Available on the App Store." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav>
+    <a href="index.html" class="nav-brand">Fl<span>o</span>ra</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ── Hero ───────────────────────────────────────────── -->
+    <section class="hero">
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-badge">Available on the App Store</span>
+          <h1>Flora</h1>
+          <p class="hero-tagline">A new flower, every day.</p>
+          <p class="hero-desc">
+            Each morning Flora reveals one flower — its common name, Latin name,
+            and a short story. Simple, beautiful, and always changing.
+          </p>
+          <div class="hero-cta-group">
+            <a href="https://apps.apple.com/app/id6759986494" class="btn-primary" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download on App Store
+            </a>
+            <a href="#features" class="btn-ghost">Explore the app</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-mockup">
+            <img src="images/Flora.png" alt="Flora app screenshot showing a daisy on a dark background" />
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true"></div>
+    </section>
+
+    <!-- ── Daily flower strip ──────────────────────────────── -->
+    <section class="daily-strip">
+      <div class="daily-strip-label">every single day</div>
+      <h2>Discover a new flower</h2>
+      <p>
+        How many flowers can you name? Flora is designed to spark
+        curiosity — one petal at a time.
+      </p>
+
+      <div class="flower-ticker" aria-hidden="true">
+        <div class="flower-ticker-track" id="tickerTrack">
+          <span class="highlight">Daisy</span>
+          <span>·</span>
+          <span>Cherry Blossom</span>
+          <span>·</span>
+          <span class="highlight">Lavender</span>
+          <span>·</span>
+          <span>Bird of Paradise</span>
+          <span>·</span>
+          <span class="highlight">Peony</span>
+          <span>·</span>
+          <span>Lotus</span>
+          <span>·</span>
+          <span class="highlight">Jasmine</span>
+          <span>·</span>
+          <span>Wisteria</span>
+          <span>·</span>
+          <span class="highlight">Magnolia</span>
+          <span>·</span>
+          <span>Sunflower</span>
+          <span>·</span>
+          <span class="highlight">Orchid</span>
+          <span>·</span>
+          <span>Poppy</span>
+          <span>·</span>
+          <span class="highlight">Tulip</span>
+          <span>·</span>
+          <span>Dahlia</span>
+          <span>·</span>
+          <span class="highlight">Hydrangea</span>
+          <span>·</span>
+          <span>Iris</span>
+          <span>·</span>
+          <span class="highlight">Camellia</span>
+          <span>·</span>
+          <span>Foxglove</span>
+          <span>·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="highlight">Daisy</span>
+          <span>·</span>
+          <span>Cherry Blossom</span>
+          <span>·</span>
+          <span class="highlight">Lavender</span>
+          <span>·</span>
+          <span>Bird of Paradise</span>
+          <span>·</span>
+          <span class="highlight">Peony</span>
+          <span>·</span>
+          <span>Lotus</span>
+          <span>·</span>
+          <span class="highlight">Jasmine</span>
+          <span>·</span>
+          <span>Wisteria</span>
+          <span>·</span>
+          <span class="highlight">Magnolia</span>
+          <span>·</span>
+          <span>Sunflower</span>
+          <span>·</span>
+          <span class="highlight">Orchid</span>
+          <span>·</span>
+          <span>Poppy</span>
+          <span>·</span>
+          <span class="highlight">Tulip</span>
+          <span>·</span>
+          <span>Dahlia</span>
+          <span>·</span>
+          <span class="highlight">Hydrangea</span>
+          <span>·</span>
+          <span>Iris</span>
+          <span>·</span>
+          <span class="highlight">Camellia</span>
+          <span>·</span>
+          <span>Foxglove</span>
+          <span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Features ────────────────────────────────────────── -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-label">what's inside</div>
+        <h2 class="section-title">Everything about each flower</h2>
+        <p class="section-sub">
+          More than just a name — every day comes with context, curiosity
+          and beauty.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🌸</span>
+            <div class="feature-title">Daily Flower</div>
+            <p class="feature-text">
+              One new flower every day. Wake up to a gorgeous botanical
+              reveal you didn't expect.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📖</span>
+            <div class="feature-title">Short &amp; Long Description</div>
+            <p class="feature-text">
+              A quick snapshot for the curious and a deep dive for the
+              passionate. Read as much or as little as you like.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">✨</span>
+            <div class="feature-title">Fun Fact</div>
+            <p class="feature-text">
+              Each flower comes with a surprising fact — perfect for
+              sharing with friends.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📱</span>
+            <div class="feature-title">Home &amp; Lock Widgets</div>
+            <p class="feature-text">
+              Your iPhone's home screen and lock screen change with the
+              flower of the day — beautiful and dynamic.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔖</span>
+            <div class="feature-title">Save Favourites</div>
+            <p class="feature-text">
+              Bookmark the flowers that speak to you and revisit them
+              whenever you like.
+            </p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔒</span>
+            <div class="feature-title">Fully Private</div>
+            <p class="feature-text">
+              No account, no tracking, no data collection. Everything
+              lives on your device.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Privacy banner ──────────────────────────────────── -->
+    <div class="privacy-banner">
+      <div class="privacy-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Zero data collection
+      </div>
+      <h2>Your privacy, fully protected.</h2>
+      <p>
+        Flora requires no sign-up, requests no permissions, and sends
+        nothing to external servers. All data is stored locally, on
+        your device only.
+      </p>
+    </div>
+
+    <!-- ── App Store CTA ────────────────────────────────────── -->
+    <section class="section" style="padding-top: 0; padding-bottom: 120px;">
+      <div class="container" style="text-align:center;">
+        <div class="divider"></div>
+        <p class="section-label">ready to begin?</p>
+        <h2 class="section-title" style="margin-bottom: 32px;">
+          Start your botanical journey
+        </h2>
+        <a href="https://apps.apple.com/app/id6759986494" class="btn-primary" style="margin: 0 auto;" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+        <p style="margin-top:16px; font-size:13px; color:var(--text-muted);">Free · iOS only · No account required</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Flora</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 Flora. All rights reserved. Built by Double E Studio.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+
+    // ── Particle system ──────────────────────────────────────
+    (function () {
+      const canvas = document.getElementById('particleCanvas');
+      const ctx    = canvas.getContext('2d');
+      let W, H, particles;
+
+      const PARTICLE_COUNT = 55;
+
+      function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function rand(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function createParticle() {
+        return {
+          x:      rand(0, W),
+          y:      rand(0, H),
+          r:      rand(0.8, 2.2),
+          vx:     rand(-0.18, 0.18),
+          vy:     rand(-0.35, -0.08),     // always drifting upward
+          alpha:  rand(0.06, 0.22),
+          wobble: rand(0, Math.PI * 2),
+          wobbleSpeed: rand(0.003, 0.009),
+          // golden or green tint
+          hue:    Math.random() > 0.55 ? '200,169,110' : '107,158,107',
+        };
+      }
+
+      function init() {
+        resize();
+        particles = Array.from({ length: PARTICLE_COUNT }, createParticle);
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        particles.forEach(p => {
+          // gentle horizontal wobble
+          p.wobble    += p.wobbleSpeed;
+          p.x         += p.vx + Math.sin(p.wobble) * 0.18;
+          p.y         += p.vy;
+
+          // recycle when off-screen
+          if (p.y + p.r < 0) {
+            p.y = H + p.r;
+            p.x = rand(0, W);
+          }
+          if (p.x < -10) p.x = W + 10;
+          if (p.x > W + 10) p.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${p.hue},${p.alpha})`;
+          ctx.fill();
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => {
+        resize();
+        particles.forEach(p => {
+          if (p.x > W) p.x = rand(0, W);
+          if (p.y > H) p.y = rand(0, H);
+        });
+      });
+
+      init();
+      draw();
+    })();
+  </script>
+
+</body>
+</html>
